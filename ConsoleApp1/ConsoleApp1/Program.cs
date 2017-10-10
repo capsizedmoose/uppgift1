@@ -11,5 +11,18 @@ namespace Uppgift1
         static void Main(string[] args)
         {
         }
+
+
+
+
+        public enum Category {
+
+
+
+
+        }
+
+
     }
+
 }

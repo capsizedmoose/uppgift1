@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static  Uppgift1.HelperClass;
+
+
 
 namespace Uppgift1
 {
@@ -10,19 +13,19 @@ namespace Uppgift1
     {
         static void Main(string[] args)
         {
-        }
-
-
-
-
-        public enum Category {
-
-
-
+            
 
         }
 
 
     }
 
+    public enum Category
+    {
+        Food,
+        Drinks,
+        Books,
+        Movies,
+        Clothes
+    }
 }

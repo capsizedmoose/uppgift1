@@ -101,6 +101,5 @@ namespace Uppgift1
             } while (answer > range); // if the input is not within the range then 
             return answer;
         }
-
     }
 }

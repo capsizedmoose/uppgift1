@@ -14,10 +14,7 @@ namespace Uppgift1
         static void Main(string[] args)
         {
             
-
         }
-
-
     }
 
     public enum Category
@@ -27,5 +24,12 @@ namespace Uppgift1
         Books,
         Movies,
         Clothes
+    }
+    public enum SortType
+    {
+        ID,
+        Price,
+        Name,
+        Cat
     }
 }

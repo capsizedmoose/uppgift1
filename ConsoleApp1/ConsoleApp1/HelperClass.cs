@@ -9,6 +9,14 @@ namespace Uppgift1
     public static class HelperClass
     {
 
+        public static void DrawSquare(int x1, int y1, int x2, int y2) {
+
+        }
+
+        public static void CngCol(ConsoleColor c) {
+            Console.ForegroundColor = c;
+        }
+
         // get input from the user. if true is inserted the string will be digits only
         public static string GetInput(bool digitsOnly)
         {
@@ -73,6 +81,42 @@ namespace Uppgift1
                 i++;
             }
             answer = GetAnswer(answers.Length - 1);
+
+            return (answer);
+        }
+        public static int MakeMenu(string question, string[] answers,bool IsOneline)
+        {
+
+            int answer;
+
+            Console.WriteLine(question);
+
+            int i = 0;
+
+            bool col = true;
+
+            foreach (string a in answers)
+            {
+                
+                col = !col;
+                CngCol(ConsoleColor.DarkGray);
+                Console.Write("[");
+
+                if (col) {CngCol(ConsoleColor.Yellow);}
+                else { CngCol(ConsoleColor.Yellow); }
+                Console.Write(i.ToString());
+
+                CngCol(ConsoleColor.DarkGray);
+                Console.Write(":");
+                CngCol(ConsoleColor.White);
+                Console.Write(a);
+                CngCol(ConsoleColor.DarkGray);
+                Console.Write("]");
+                CngCol(ConsoleColor.Gray);
+                i++;
+            }
+            answer = GetAnswer(answers.Length - 1);
+            Console.WriteLine();
 
             return (answer);
         }

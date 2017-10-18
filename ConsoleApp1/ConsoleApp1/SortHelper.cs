@@ -8,16 +8,15 @@ namespace Uppgift1
 {
     class SortHelper
     {
-        ShopStorage list = new ShopStorage();
+        ShopStorage ShopInventory = new ShopStorage();
 
 
-        public ItemStorage<Item> SortBy(SortType[] sortType)
+        public IEnumerable<Item> SortBy(List<SortType> sortType)
         {
 
-            var query = list;
+            var query = ShopInventory.OrderBy(e => e.ID);
 
-
-            for (int i = query.Count - 1; i >= 0; i--)
+            for (int i = sortType.Count - 1; i >= 0; i--)
             {
                 switch (sortType[i])
                 {
@@ -36,9 +35,10 @@ namespace Uppgift1
                 }
             }
 
-             = query;
-
-            return itemList;
+            return query;
         }
+
+
+
     }
 }

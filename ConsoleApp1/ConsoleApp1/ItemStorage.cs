@@ -9,6 +9,7 @@ namespace Uppgift1
 {
     public class ItemStorage<T> : IEnumerable<T>
     {
+        int ID = 0;
         T[] items;
         public T this[int index]{
             get { CheckBoundaries(index); return items[index]; }
